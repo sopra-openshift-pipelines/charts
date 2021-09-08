@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: aguante-el-rojo-task
+  namespace: spring-petclinic
+spec:
+  steps:
+    - image: registry.redhat.io/ubi7/ubi-minimal
+      command:
+        - /bin/bash
+        - '-c'
+        - echo
+        - "Aguante el rojo"
